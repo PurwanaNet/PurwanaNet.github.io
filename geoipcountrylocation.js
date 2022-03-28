@@ -83,3 +83,6 @@ if (window.Worker) {
 	countryloc_script.src = "https://purwananet.github.io/geoipcountrylocation-impl-noworker.js";
 	document.body.appendChild(countryloc_script);
 }
+window.onload = function() {
+	findGeoLocationCountry();
+};
