@@ -2,7 +2,7 @@ if (window.Worker) {
 	var script_tag = document.createElement('script');
 	script_tag.type = 'worker';
 	script_tag.id = 'workersource';
-	script_tag.text = 'importScripts("https://purwananet.github.io/geoipcountrylocation-impl.js");';
+	script_tag.text = 'importScripts("https://assets.purwana.net/geoipcountrylocation-impl.js");';
 	document.body.appendChild(script_tag);
 	function getURL() {
 	  const txt = document.getElementById( 'workersource' ).textContent;
@@ -80,7 +80,7 @@ if (window.Worker) {
 }else{
 	var countryloc_script = document.createElement('script');
 	countryloc_script.id = 'geoiplocscr';
-	countryloc_script.src = "https://purwananet.github.io/geoipcountrylocation-impl-noworker.js";
+	countryloc_script.src = "https://assets.purwana.net/geoipcountrylocation-impl-noworker.js";
 	document.body.appendChild(countryloc_script);
 }
 window.onload = function() {

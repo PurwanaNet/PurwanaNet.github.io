@@ -83,14 +83,14 @@ var findGeoLocationCountry = function(){
 			//console.log("i'm tracking you!");
 			  //x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
 			  var pt = turf.point([position.coords.longitude,position.coords.latitude]);
-				getJSON('https://purwananet.github.io/countries.json',  function(err, data) {
+				getJSON('https://assets.purwana.net/countries.json',  function(err, data) {
 
 					if (err != null) {
 						console.error(err);
 						onFindGeoLocationCountryDone();
 					} else {
 						var countrycodes =  null;
-						getJSON('https://purwananet.github.io/countrycodes.json',  function(err2, data2) {
+						getJSON('https://assets.purwana.net/countrycodes.json',  function(err2, data2) {
 							if (err2 != null) {
 								console.error(err2);
 							}else{

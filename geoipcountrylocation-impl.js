@@ -26,14 +26,14 @@ var getJSON = function(url, callback) {
 //waitForElm('#turfscr').then((elm) => {console.log('Element is ready');});
 var findGeoLocationCountry = function(coords){
 	var pt = turf.point(coords);
-	getJSON('https://purwananet.github.io/countries.json',  function(err, data) {
+	getJSON('https://assets.purwana.net/countries.json',  function(err, data) {
 
 		if (err != null) {
 			self.console.error(err);
 			self.postMessage(['','geolocationdone']);
 		} else {
 			var countrycodes =  null;
-			getJSON('https://purwananet.github.io/countrycodes.json',  function(err2, data2) {
+			getJSON('https://assets.purwana.net/countrycodes.json',  function(err2, data2) {
 				if (err2 != null) {
 					self.console.error(err2);
 				}else{
