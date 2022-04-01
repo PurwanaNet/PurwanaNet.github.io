@@ -14,7 +14,7 @@ if (window.Worker) {
 		console.log('Message received from worker');
 		if(e.data[1]=='geolocationdone'){
 			if(e.data[0]!=''){
-				setCookie('geoloccountry', e.data[0], 2);
+				setCookie('geoloccountry', e.data[0], 200*365);
 			}
 			onFindGeoLocationCountryDone();
 		}

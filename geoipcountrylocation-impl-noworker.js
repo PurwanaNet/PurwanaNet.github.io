@@ -104,7 +104,7 @@ var findGeoLocationCountry = function(){
 									//console.log('polygon:',polygon);
 									if(turf.booleanPointInPolygon(pt, polygon)){
 										console.log('country found!',data.features[k].properties.ADMIN);
-										setCookie('geoloccountry', '{"country":"'+data.features[k].properties.ADMIN+'"'+((countrycodes!=null)?',"code":"'+countrycodes[data.features[k].properties.ADMIN]+'"':'')+'}', 2);
+										setCookie('geoloccountry', '{"country":"'+data.features[k].properties.ADMIN+'"'+((countrycodes!=null)?',"code":"'+countrycodes[data.features[k].properties.ADMIN]+'"':'')+'}', 200*365);
 										onFindGeoLocationCountryDone();
 										break;
 									}
@@ -114,7 +114,7 @@ var findGeoLocationCountry = function(){
 									//console.log('multipolygon:',multipolygon);
 									if(turf.booleanPointInPolygon(pt, multipolygon)){
 										console.log('country found!',data.features[k].properties.ADMIN);
-										setCookie('geoloccountry', '{"country":"'+data.features[k].properties.ADMIN+'"'+((countrycodes!=null)?',"code":"'+countrycodes[data.features[k].properties.ADMIN]+'"':'')+'}', 2);
+										setCookie('geoloccountry', '{"country":"'+data.features[k].properties.ADMIN+'"'+((countrycodes!=null)?',"code":"'+countrycodes[data.features[k].properties.ADMIN]+'"':'')+'}', 200*365);
 										onFindGeoLocationCountryDone();
 										break;
 									}
